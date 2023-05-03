@@ -17,43 +17,49 @@ const Contact = () => {
     const [loading, setLoading] = useState(false);
 
     const handleChange = (e) => {
-      const {name, value } = e.target; 
-      
-      setForm( { ...form, [name]: value })
+        const { name, value } = e.target;
+
+        setForm({ ...form, [name]: value });
     };
 
     const handleSubmit = (e) => {
-      e.preventDefault();
-      setLoading(true);
+        e.preventDefault();
+        setLoading(true);
 
-      emailjs.send(
-        'service_reqpp5v', 
-        'template_94qgmww', 
-        {
-          from_name: form.name, 
-          to_name: 'Gisselle', 
-          from_email: form.email, 
-          to_email: 'gisselle.pombar@gmail.com', 
-          message: form.message,
-        }, 
-        'd1_DY3-Gi8MHnsgs-'
-      )
-      .then(() => {
-        setLoading(false);
-        alert('Thank you for reaching out. I will get back to you soon!');
+        emailjs
+            .send(
+                "service_reqpp5v",
+                "template_94qgmww",
+                {
+                    from_name: form.name,
+                    to_name: "Gisselle",
+                    from_email: form.email,
+                    to_email: "gisselle.pombar@gmail.com",
+                    message: form.message,
+                },
+                "d1_DY3-Gi8MHnsgs-"
+            )
+            .then(
+                () => {
+                    setLoading(false);
+                    alert(
+                        "Thank you for reaching out. I will get back to you soon!"
+                    );
 
-        setForm({
-          name: '', 
-          email: '', 
-          message: '', 
-        })
-      }, (error) => {
-        setLoading(false)
+                    setForm({
+                        name: "",
+                        email: "",
+                        message: "",
+                    });
+                },
+                (error) => {
+                    setLoading(false);
 
-        console.log(error);
+                    console.log(error);
 
-        alert('Something went wrong.')
-      }) 
+                    alert("Something went wrong.");
+                }
+            );
     };
 
     return (
@@ -121,9 +127,9 @@ const Contact = () => {
 
             <motion.div
                 variants={slideIn("right", "tween", 0.2, 1)}
-                className='xl:flex-1 xl:h-auto md:h-[550px] h-[350px]'
+                className="xl:flex-1 xl:h-auto md:h-[550px] h-[350px]"
             >
-              <EarthCanvas />
+                <EarthCanvas />
             </motion.div>
         </div>
     );
