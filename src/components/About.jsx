@@ -37,24 +37,61 @@ const ServiceCard = ({ index, title, icon }) => {
 };
 
 const About = () => {
+    const two = (
+        <p>
+          Outside of work, I'm interested in following the advancement of
+          technology. I also play a lot of video games and make TikToks while
+          participating in Hackathons from time to time
+        </p>
+      );
+    const tech_stack = [
+        "Javascript ES6+",
+        "Python",
+        "React.js",
+        "Java",
+        "Node.js",
+        "React Native",
+        "Typescript",
+        "Three JS",
+        "SQL",
+        "Next JS",
+      ];
+    
+      const tech_items = tech_stack.map((stack) => <li>{stack}</li>);
     return (
         <>
             <motion.div variants={textVariant()}>
                 <p className={styles.sectionSubText}>Introduction</p>
-                <h2 className={styles.sectionHeadText}>Overview.</h2>
+                <h2 className={styles.sectionHeadText}>About Me.</h2>
             </motion.div>
             <motion.p
                 variants={fadeIn("", "", 0.1, 1)}
                 className="mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]"
             >
                 I'm a skilled software developer with experience in Typescript
-                and Javascript, and expertise in frameworks like React, Node.js,
-                and Three.js. I'm a quick learner and collaborate closely
-                withclients to create efficient, scalable, and user-friendly
+                and Javascript, and expertise in frameworks like React, React Native, and Node.js,
+                I'm a quick learner and collaborate closely
+                with clients to create efficient, scalable, and user-friendly
                 solutions that solve real-world problems. Let's work together to
                 bring your ideas to life!
             </motion.p>
-
+            <div className="container">
+        <p className="about-text">
+          <div className="about-description">
+            {"Here are some technologies I have been working with:"}
+            <ul className="tech-stack">
+              {tech_stack.map(function (tech_item, i) {
+                return (
+                  <div>
+                    <li>{tech_item}</li>
+                  </div>
+                );
+              })}
+            </ul>
+            {[two]}
+          </div>
+        </p>
+      </div>
             <div className="mt-20 flex flex-wrap gap-10">
                 {services.map((service, index) => (
                     <ServiceCard
