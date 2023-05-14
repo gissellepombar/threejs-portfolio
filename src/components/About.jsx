@@ -6,6 +6,7 @@ import { styles } from "../styles";
 import { services } from "../constants";
 import { fadeIn, textVariant } from "../utils/motion";
 import { SectionWrapper } from "../hoc";
+import Tech from "./Tech";
 
 const ServiceCard = ({ index, title, icon }) => {
     return (
@@ -75,6 +76,7 @@ const About = () => {
                 solutions that solve real-world problems. Let's work together to
                 bring your ideas to life!
             </motion.p>
+            <Tech />
             <div className="container">
         <p className="about-text">
           <div className="about-description">
