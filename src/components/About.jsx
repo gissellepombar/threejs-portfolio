@@ -38,27 +38,7 @@ const ServiceCard = ({ index, title, icon }) => {
 };
 
 const About = () => {
-    const two = (
-        <p>
-          Outside of work, I'm interested in following the advancement of
-          technology. I also play a lot of video games and make TikToks while
-          participating in Hackathons from time to time
-        </p>
-      );
-    const tech_stack = [
-        "Javascript ES6+",
-        "Python",
-        "React.js",
-        "Java",
-        "Node.js",
-        "React Native",
-        "Typescript",
-        "Three JS",
-        "SQL",
-        "Next JS",
-      ];
-    
-      const tech_items = tech_stack.map((stack) => <li>{stack}</li>);
+
     return (
         <>
             <motion.div variants={textVariant()}>
@@ -76,33 +56,6 @@ const About = () => {
                 solutions that solve real-world problems. Let's work together to
                 bring your ideas to life!
             </motion.p>
-            <Tech />
-            <div className="container">
-        <p className="about-text">
-          <div className="about-description">
-            {"Here are some technologies I have been working with:"}
-            <ul className="tech-stack">
-              {tech_stack.map(function (tech_item, i) {
-                return (
-                  <div>
-                    <li>{tech_item}</li>
-                  </div>
-                );
-              })}
-            </ul>
-            {[two]}
-          </div>
-        </p>
-      </div>
-            <div className="mt-20 flex flex-wrap gap-10">
-                {services.map((service, index) => (
-                    <ServiceCard
-                        key={service.title}
-                        index={index}
-                        {...service}
-                    />
-                ))}
-            </div>
         </>
     );
 };
