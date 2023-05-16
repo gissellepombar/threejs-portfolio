@@ -23,6 +23,11 @@ import {
     jobit,
     tripguide,
     threejs,
+    todew,
+    echo,
+    socialq,
+    dailyaff,
+    portfolio,
   } from "../assets";
   
   export const navLinks = [
@@ -80,10 +85,10 @@ import {
       name: "React JS",
       icon: reactjs,
     },
-    {
-      name: "Redux Toolkit",
-      icon: redux,
-    },
+    // {
+    //   name: "Redux Toolkit",
+    //   icon: redux,
+    // },
     {
       name: "Tailwind CSS",
       icon: tailwind,
@@ -104,14 +109,14 @@ import {
       name: "git",
       icon: git,
     },
-    {
-      name: "figma",
-      icon: figma,
-    },
-    {
-      name: "docker",
-      icon: docker,
-    },
+    // {
+    //   name: "figma",
+    //   icon: figma,
+    // },
+    // {
+    //   name: "docker",
+    //   icon: docker,
+    // },
   ];
   
   const experiences = [
@@ -215,7 +220,7 @@ import {
           color: "pink-text-gradient",
         },
       ],
-      image: carrent,
+      image: echo,
       source_code_link: "https://echo-cards.web.app/",
     },
     {
@@ -235,7 +240,7 @@ import {
           color: "pink-text-gradient",
         },
       ],
-      image: jobit,
+      image: portfolio,
       source_code_link: "https://github.com/gissellepombar/threejs-portfolio",
     },
     {
@@ -256,8 +261,8 @@ import {
           color: "pink-text-gradient",
         },
       ],
-      image: tripguide,
-      source_code_link: "https://github.com/gissellepombar/affirmation-frontend",
+      image: socialq,
+      source_code_link: "https://github.com/gissellepombar/socialQ",
     },
     {
       name: "ToDew 🌱",
@@ -273,12 +278,12 @@ import {
           color: "green-text-gradient",
         },
         {
-          name: "css",
+          name: "firestore",
           color: "pink-text-gradient",
         },
       ],
-      image: tripguide,
-      source_code_link: "https://github.com/",
+      image: todew,
+      source_code_link: "https://github.com/gissellepombar/todew-mobile",
     },
     {
       name: "Daily Lift",
@@ -298,8 +303,8 @@ import {
           color: "pink-text-gradient",
         },
       ],
-      image: tripguide,
-      source_code_link: "https://github.com/",
+      image: dailyaff,
+      source_code_link: "https://github.com/gissellepombar/affirmation-frontend",
     },
   ];
   

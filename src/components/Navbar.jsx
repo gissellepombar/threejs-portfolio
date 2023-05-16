@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 import { styles } from "../styles";
 import { navLinks } from "../constants";
-import { logo, menu, close } from "../assets";
+import { gglogo, menu, close } from "../assets";
 
 const Navbar = () => {
     const [active, setActive] = useState("");
@@ -23,13 +23,13 @@ const Navbar = () => {
                     }}
                 >
                     <img
-                        src={close}
+                        src={gglogo}
                         alt="close"
                         className="w-9 h-9 object-contain"
                     />
                     <p className="text-white text-[18px] font-bold cursor-pointer flex">
                         Gisselle &nbsp;{" "}
-                        <span className="sm:block hidden">| Pombar</span>
+                        <span className="sm:block hidden">Pombar</span>
                     </p>
                 </Link>
                 <ul className="list-none hidden sm:flex flex-row gap-10">
