@@ -25,7 +25,7 @@ const ProjectCard = ({
                 }}
                 className="bg-tertiary p-5 rounded-2xl sm:w-[360px] w-full"
             >
-                <div className="realtive w-full h-[230px]">
+                <div className="relative w-full h-[230px]">
                     <img
                         src={image}
                         alt={name}
@@ -117,4 +117,4 @@ const Works = () => {
     );
 };
 
-export default SectionWrapper(Works, "");
+export default SectionWrapper(Works, "", false);
