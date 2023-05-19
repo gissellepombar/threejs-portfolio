@@ -1,6 +1,7 @@
 import React, { useRef, useState } from "react";
 import { motion } from "framer-motion";
 import emailjs from "@emailjs/browser";
+import { EMAILJS  } from "../../service_account.js";
 
 import { styles } from "../styles";
 import { EarthCanvas } from "./canvas";
@@ -33,8 +34,8 @@ const Contact = () => {
 
     emailjs
       .send(
-        "service_7q86otf",
-        "template_94qgmww",
+        EMAILJS.SERVICE_ID,
+        EMAILJS.TEMPLATE_ID,
         {
           from_name: form.name,
           to_name: "Gisselle",
@@ -42,7 +43,7 @@ const Contact = () => {
           to_email: "gisselle.pombar@gmail.com",
           message: form.message,
         },
-        "d1_DY3-Gi8MHnsgs-"
+        EMAILJS.PUBLIC_KEY
       )
       .then(
         () => {
